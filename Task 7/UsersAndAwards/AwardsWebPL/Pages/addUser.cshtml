@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = "~/_basicLayout.cshtml";
+
+    var bll = AwardsWebPL.WebPL.Bll;
+
+    string name = null;
+    DateTime birthday = new DateTime();
+    uint age = 0;
+
+
+    if (IsPost)
+    {
+        
+        name = Request["name"].Trim();
+        birthday = DateTime.Parse(Request["date"]);
+        age = uint.Parse(Request["age"]);
+
+        bll.AddUser(new Awards.Entities.User(name, birthday, age));
+    }
+
+}
+<form action="~/Pages/addUser.cshtml" method="post">
+    <p>
+        <label>Name:<input type="text" name="name" /></label>
+    </p>
+    <p>
+        <label>Age:<input type="number" name="age" max="150" min="15"/></label>
+    </p>
+    <p>
+        <label>Date of birth:<input type="date" name="date" /></label>
+    </p>
+
+    <button>Submit</button>
+</form>
+
+@if (IsPost)
+{
+    <div>
+        <p>Added a user :</p>
+        <p>Name : @name </p>
+        <p>Age: @age </p>
+        <p>Date of birth : @birthday </p>
+    </div>
+}

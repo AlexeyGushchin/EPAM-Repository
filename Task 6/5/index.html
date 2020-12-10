@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteBook</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/note.css">
+    <link rel="stylesheet" href="css/modal_window.css">
+    <link rel="stylesheet" href="css/new_note.css">
+    <link rel="stylesheet" href="css/change_note.css">
+</head>
+<body>
+    
+    
+    <div id="wrapper">
+        <h1>NoteBook</h1>
+
+        <div id="search-wrapper">
+            <input type="text" id="search" placeholder="Search...">
+            <button id="search-button" onclick="findNotes()">Search</button>
+            <button id="clear-search-button" onclick="showAll()">Clear</button>
+        </div>
+
+        <div id="new-note-button-wrapper">
+            <button id="add-new-note-button" onclick="openModalWindow('new')">New</button>
+        </div>
+
+        
+        <div id="notes-wrapper">
+            
+            
+        </div>
+    </div> 
+    
+    <div id="modal-window" onclick="closeModalWindow()">
+        <div id="new-note-wrapper" onclick="blind()">
+            
+            <input type="text" placeholder="Title..." id="new-note-title" >
+            <textarea id="new-note-text" cols="30" rows="10" placeholder="Text..." ></textarea>
+
+            <div id="new-note-button-wrapper">
+
+                <button id="save-new-note-button" onclick="addNewNote()">Save</button>
+
+                <button id="close-note-creator" onclick="closeModalWindow()">Close</button>
+            </div>
+        </div>
+
+        <div id="change-note-wrapper" onclick="blind()">
+            
+            <input type="text" placeholder="Title..." id="change-note-title" >
+            <textarea id="change-note-text" cols="30" rows="10" placeholder="Text..."></textarea>
+
+            <div id="change-note-button-wrapper">
+
+                <button id="save-new-note-button" onclick="changeNote()">Change</button>
+
+                <button id="close-note-creator" onclick="closeModalWindow()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/index.js"></script>
+    
+</body>
+</html>

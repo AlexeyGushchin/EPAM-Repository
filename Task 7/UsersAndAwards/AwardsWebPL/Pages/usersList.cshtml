@@ -1,0 +1,44 @@
+﻿@{
+    <link href="~/Style/users.css" rel="stylesheet" />
+    Layout = "~/_basicLayout.cshtml";
+
+    var bll = AwardsWebPL.WebPL.Bll;
+    var users = bll.GetAllUsers();
+
+    string userId = null;
+}
+@if (IsPost)
+{
+    userId = Request["id"];
+    bll.RemoveUserById(userId);
+}
+
+
+<div class="users-wrapper">
+    @foreach (var user in users)
+    {
+        <div class="user-wrapper" >
+            <form action="~/Pages/usersList.cshtml" method="post">
+                <p>Name: @user.Name</p>
+                <p>Birthday: @user.DateOfBirth.Date.ToShortDateString()</p>
+                <p>Age: @user.Age</p>
+
+                @if (user.awards.Count() ==  0)
+                {
+                    <p>User does't have any awards!</p>
+                }
+                else
+                {
+                    <p>User's awards:</p>
+                    foreach(var award in user.awards)
+                    {
+                        <p>@award </p>
+                    }
+                }
+                <input type="hidden" name="id" value="@user.Id.ToString()" />
+                <button>Delete</button>
+            </form>
+        </div>
+    }
+</div>
+

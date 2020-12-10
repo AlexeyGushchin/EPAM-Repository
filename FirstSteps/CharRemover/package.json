@@ -1,0 +1,9 @@
+{
+  "name": "char-remover",
+  "version": "0.0.0",
+  "description": "CharRemover",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

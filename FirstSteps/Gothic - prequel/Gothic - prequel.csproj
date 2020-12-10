@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B6C4EAC-8B97-4AD3-B85C-47DA3518CB4F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Gothic___prequel</RootNamespace>
+    <AssemblyName>Gothic - prequel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractGameObject.cs" />
+    <Compile Include="Barrier\Teleport.cs" />
+    <Compile Include="Barrier\Teleport2.cs" />
+    <Compile Include="Bonuses\AbstractBonus.cs" />
+    <Compile Include="Bonuses\Apple.cs" />
+    <Compile Include="Bonuses\Coin.cs" />
+    <Compile Include="Bot\AbstractBot.cs" />
+    <Compile Include="Bot\AbstractEnemy.cs" />
+    <Compile Include="Bot\AbstractHero.cs" />
+    <Compile Include="Bot\Beliar.cs" />
+    <Compile Include="Bot\Enemy.cs" />
+    <Compile Include="Bot\Hero.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Interfaces and Enums\IMovable.cs" />
+    <Compile Include="Interfaces and Enums\IReward.cs" />
+    <Compile Include="Interfaces and Enums\IUpgradeable.cs" />
+    <Compile Include="Interfaces and Enums\Color.cs" />
+    <Compile Include="Interfaces and Enums\Signs.cs" />
+    <Compile Include="Map\MyMap.cs" />
+    <Compile Include="Logic\Meet.cs" />
+    <Compile Include="Logic\Point.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Barrier\AbstractBarrier.cs" />
+    <Compile Include="Barrier\Wall.cs" />
+    <Compile Include="Barrier\Wood.cs" />
+    <Compile Include="Logic\ColorSetter.cs" />
+    <Compile Include="Logic\Step.cs" />
+    <Compile Include="Logic\Writer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

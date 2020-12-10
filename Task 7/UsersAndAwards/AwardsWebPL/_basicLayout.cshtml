@@ -1,0 +1,37 @@
+﻿@{
+
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>U&A</title>
+    <link href="~/Style/header.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Users & Awards</h1>
+    </header>
+    @if (User.Identity.IsAuthenticated)
+    {
+        @RenderPage("~/Pages/Partial/_loginPartial.cshtml")
+        <p></p>
+        @RenderPage("~/Pages/Partial/_menu.cshtml")
+
+        <div>
+            @RenderBody()
+        </div>
+    }
+    else
+    {
+        @RenderPage("~/Pages/Partial/_loginPartial.cshtml")
+        @RenderBody()
+    }
+
+
+    <script src="~/Scripts/index.js"></script>
+</body>
+</html>

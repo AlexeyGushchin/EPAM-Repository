@@ -1,0 +1,44 @@
+#new-note-wrapper {
+
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    box-shadow: 0 20px 20px black;
+    display: none;
+    
+}
+
+#new-note-title{
+    display: block;
+    width: 100%;
+}
+
+#new-note-text {
+    display: block;
+    width: 100%;
+    
+}
+
+#new-note-button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    background: white;
+    margin: 0px;
+}
+
+#save-new-note-button {
+    width: 100px;
+    height: 30px;
+    padding: 2px;
+    margin: 0px 5px;
+
+}
+
+#close-note-creator{
+    width: 100px;
+    padding: 2px;
+    height: 30px;
+    margin: 0px 5px;
+}

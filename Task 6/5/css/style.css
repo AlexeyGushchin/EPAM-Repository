@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+#wrapper {
+    width: 70%;
+    min-width: 500px;
+    margin: auto;
+
+}
+
+
+input, textarea{
+    padding: 3px;
+}
+
+
+.clearfix{
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+
+
+img{
+    width: 100%;
+}
+
+
+
+

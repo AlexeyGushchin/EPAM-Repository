@@ -1,0 +1,52 @@
+#notes-wrapper {
+    border-left: 3px solid rgb(240, 190, 190);
+    border-right: 3px solid rgb(240, 190, 190);
+}
+
+.note{
+    padding: 5px;
+}
+
+
+.note:hover{
+    background: rgb(192, 195, 196);
+}
+
+
+
+.note-title {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    background: rgb(230, 227, 235);
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.note-text {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+    background: rgb(221, 248, 224);
+    word-break: break-all;
+    white-space: pre-wrap;
+    
+}
+
+.delete-note-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-note-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+.delete-note-button:hover {
+    background: rgb(255, 220, 220);
+}

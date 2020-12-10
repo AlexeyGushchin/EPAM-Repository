@@ -1,0 +1,9 @@
+{
+  "name": "math-calculator",
+  "version": "0.0.0",
+  "description": "Math Calculator",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}

@@ -1,0 +1,17 @@
+﻿@{
+    <link href="~/Style/users.css" rel="stylesheet" />
+    Layout = "~/_basicLayout.cshtml";
+
+    var bll = AwardsWebPL.WebPL.Bll;
+    var awards = bll.GetAllAwards();
+}
+
+<div class="users-wrapper">
+    @foreach (var award in awards)
+    {
+        <div class="user-wrapper">
+            <p>Award: @award.Name</p>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/_basicLayout.cshtml";
+
+    var bll = AwardsWebPL.WebPL.Bll;
+    string awName = null;
+
+
+    if (IsPost)
+    {
+        awName = Request["awardName"];
+        bll.AddAward(awName);
+    }
+
+}
+<form action="~/Pages/addAward.cshtml" method="post">
+    <input id="awarNameInput" type="text" name="awardName" value="" />
+    <button>Create</button>
+</form>
+
+@if (IsPost)
+{
+<div>
+    Added a award with the name @awName
+</div>
+}

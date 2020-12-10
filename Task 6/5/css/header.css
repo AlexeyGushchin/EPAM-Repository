@@ -1,0 +1,63 @@
+h1 {
+    
+    background: rgba(78, 235, 64, 0.8);
+    margin: 30px auto;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+    border-radius: 10px 10px 10px 50px;
+    box-shadow: 20px 20px 20px rgb(150, 221, 245);
+    color: white;
+    
+}
+
+#new-note-button-wrapper {
+    display: flex;
+    margin: 10px auto;
+}
+
+#add-new-note-button {
+    margin: 30px auto;
+    width: 50px;
+    height: 50px;
+    background: rgb(245, 201, 6);
+    cursor: pointer;
+}
+
+#search-wrapper {
+    display: flex;
+    margin: 10px auto;
+    flex-direction: column;
+}
+
+#search {
+    height: 20px;
+    width: 150px;
+    padding-left: 3px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin:  auto;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+#search-button {
+    margin: auto;
+    margin-top: 5px;
+    padding: 3px;
+    cursor: pointer;
+    width: 80px;
+}
+
+#clear-search-button{
+    margin: auto;
+    margin-top: 5px;
+    padding: 3px;
+    cursor: pointer;
+    width: 80px;
+    display: none;
+}
+
+#search:hover {
+    width: 300px;
+}
